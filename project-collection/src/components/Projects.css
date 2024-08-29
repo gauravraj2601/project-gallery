@@ -1,12 +1,18 @@
 #projects{
-    margin-top: 100px;
-   margin-bottom: 50px;
+   /* margin-bottom: 50px; */
    width: 100%; 
 }
 #project-heading{
      margin: auto;
+     margin-bottom: 10px;
+     padding: 2px;
    text-align: center;
-   font-family:Poppins, sans-serif; 
+   font-family:Poppins, sans-serif;
+   background-color: #fff;
+   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; 
+   position: sticky;
+   top: 0;
+   z-index: 2;
 }
 #project-heading h1{
     font-size: 28px;
