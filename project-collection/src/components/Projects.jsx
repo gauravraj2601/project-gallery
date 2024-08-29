@@ -31,7 +31,7 @@ const Projects = () => {
   };
 
   const fetchData = () =>{
-    axios.get("http://localhost:8080/project")
+    axios.get("https://project-gallery-ar14.onrender.com/project")
     .then((res)=>setProjectData(res.data.projects))
     .catch(error=>console.log(error.message))
   }
@@ -39,7 +39,7 @@ const Projects = () => {
   useEffect(()=>{
     fetchData()
   },[])
-console.log(projectData)
+console.log(`${projectData.length>0?"gotData":"No Data"}`)
   return (
     
       <div id="projects">
