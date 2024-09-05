@@ -162,8 +162,10 @@ const Projects = () => {
             />
           </div>
         ) : (
-          projectData?.map((el) => (
-            <div className="project-card" key={el._id}>
+          projectData?.map((el,index) => {
+            if(index%2 === 0){
+                return (
+                  <div className="project-card" key={el._id}>
               <div className="project-image">
                 <img src={el.project_Image} alt={el.name} />
               </div>
@@ -194,7 +196,44 @@ const Projects = () => {
                 </div>
               </div>
             </div>
-          ))
+                )
+            
+            }
+            else{
+                return (
+                  <div className="project-card2">
+                  <div className="project-image2">
+                  <img src={el.project_Image} alt={el.name} />
+                  </div>
+                  <div className="project-info2">
+                    <div className="project-title2">
+                      <h2>{el.name}</h2>
+                    </div>
+                    <div className="project-description2">
+                    <p>{el.description}</p>
+                    </div>
+                    <div className="project-tech-stack2">
+                      <p>Tech-Stack: {el.techStacks} </p>                </div>
+                    <div className="project-links2">
+                      <button
+                        className="project-github-link"
+                        onClick={() => window.open(el.github)}
+                      >
+                        <BsGithub />
+                      </button>
+    
+                      <button
+                        className="project-deployed-link"
+                        onClick={() => window.open(el.deployed)}
+                      >
+                        <SiNetlify />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                )
+            }
+})
         )}
       </div>
     </div>
