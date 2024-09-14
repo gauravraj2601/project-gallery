@@ -32,6 +32,12 @@ const Projects = () => {
     window.open("https://elctronix-express-k74afyg3e-ganeshgourav.vercel.app/");
   };
 
+  const resumeGit = () =>{
+    window.open("https://github.com/gauravraj2601/wisdom-resume")
+  }
+  const resumeDep = () =>{
+    window.open("https://wisdom-resume.vercel.app/")
+  }
   const fetchData = () => {
     setIsLoading(true);
     axios
@@ -149,6 +155,39 @@ const Projects = () => {
           </div>
         </div>
 
+      {/* Resume web  */}
+      <div className="project-card2">
+          <div className="project-image2">
+            <img
+              src="https://i.ibb.co/MpS4THs/Screenshot-20240914-194419.png"
+              alt="resume-web"
+            />
+          </div>
+          <div className="project-info2">
+            <div className="project-title2">
+              <h2>Gaurav's Resume</h2>
+            </div>
+            <div className="project-description2">
+              <p>
+              Explore Gaurav Raj's professional journey as a Software Developer specializing in React, Tailwind CSS, and Full Stack Web Development. View detailed sections on skills, projects, and additional achievements.
+              </p>
+            </div>
+            <div className="project-tech-stack2">
+              <p>Tech-Stack: Next.js | Tailwind CSS | React Flowbite</p>
+            </div>
+            <div className="project-links2">
+              <button className="project-github-link2" onClick={resumeGit}>
+                <BsGithub />
+              </button>
+              <button
+                className="project-deployed-link2"
+                onClick={resumeDep}
+              >
+                <SiNetlify />
+              </button>
+            </div>
+          </div>
+        </div>
         {/* /****** */}
 
         {isLoading ? (
